@@ -1,0 +1,23 @@
+*** Variables ***
+${browser} =  chrome
+${url} =  https://demo.nopcommerce.com/
+${typing_first_name} =  Ahmed
+${typing_second_name} =  Elshal
+${typing_email} =  ahmedels1118@gmail.com
+${typing_password} =  1231456ahmed
+${first_product_name} =  Apple MacBook Pro 13-inch
+${second_product_name} =  Asus N551JK-XO076H Laptop
+${REMOTE_URL} =  https://ahmdmorshedy:c8q3eef2-rede-435d-8db9-db9aqe24cea64@ondemand.saucelabs.com:443/wd/hub
+${DESIRED_CAPABILITIES} =  name:Win 10 + Chrome 80,platformName:Windows 10,browserName:chrome,browserVersion:80.0
+${typing_new_fname} =  Ahmed
+${typing_new_lname} =  Morshedy
+${typing_new_email} =  ahmedmorshedy2020@yahoo.com
+${typing_city} =  fowah
+${typing_new_address} =  sendiun
+${typing_zip} =  123456
+${typing_phoneNumber} =  010986554457
+${typing_Cardholder_name} =  purching
+${typing_Card_Number} =  5555912901438568
+${typing_Card_Code} =  123
+${Expire_Month_Typing} =  3
+${Expire_Year_Typing} =  2022

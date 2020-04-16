@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20200413 20:56:06.114" rpa="false">
+<suite id="s1" name="CompareProducts" source="C:\development\robot-scripts\ecommerce\tests\03__CompareProducts.robot">
+<test id="s1-t1" name="User Can Compare Products">
+<kw name="Begin Web Test" library="Common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200413 20:56:06.473" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200413 20:56:06.473" endtime="20200413 20:56:09.531"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200413 20:56:09.531" endtime="20200413 20:56:10.678"></status>
+</kw>
+<status status="PASS" starttime="20200413 20:56:06.473" endtime="20200413 20:56:10.678"></status>
+</kw>
+<kw name="Add Compare for &quot;Two Products&quot;" library="ecommerceApp">
+<kw name="Load" library="Common">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20200413 20:56:10.678" level="INFO">Opening url 'https://demo.nopcommerce.com/'</msg>
+<status status="PASS" starttime="20200413 20:56:10.678" endtime="20200413 20:56:14.335"></status>
+</kw>
+<status status="PASS" starttime="20200413 20:56:10.678" endtime="20200413 20:56:14.336"></status>
+</kw>
+<kw name="Enter &quot;First Product Name&quot;" library="HomePage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_text_variable}</arg>
+<arg>${first_product_name}</arg>
+</arguments>
+<msg timestamp="20200413 20:56:14.337" level="INFO">Typing text 'Apple MacBook Pro 13-inch' into text field 'id=small-searchterms'.</msg>
+<status status="PASS" starttime="20200413 20:56:14.337" endtime="20200413 20:56:14.585"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200413 20:56:16.596" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200413 20:56:14.586" endtime="20200413 20:56:16.596"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${search_button_variable}</arg>
+</arguments>
+<msg timestamp="20200413 20:56:16.596" level="INFO">Clicking button 'xpath=//input[@value="Search"]'.</msg>
+<status status="PASS" starttime="20200413 20:56:16.596" endtime="20200413 20:56:18.692"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200413 20:56:20.707" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200413 20:56:18.692" endtime="20200413 20:56:20.707"></status>
+</kw>
+<status status="PASS" starttime="20200413 20:56:14.336" endtime="20200413 20:56:20.707"></status>
+</kw>
+<kw name="Add Compare first product" library="CompareProductPO">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Click Button</arg>
+<arg>${add_compare_firstProduct}</arg>
+</arguments>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${add_compare_firstProduct}</arg>
+</arguments>
+<msg timestamp="20200413 20:56:20.707" level="INFO">Clicking button 'xpath=//input[@class="button-2 add-to-compare-list-button"]'.</msg>
+<status status="PASS" starttime="20200413 20:56:20.707" endtime="20200413 20:56:20.875"></status>
+</kw>
+<status status="PASS" starttime="20200413 20:56:20.707" endtime="20200413 20:56:20.875"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200413 20:56:23.889" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200413 20:56:20.876" endtime="20200413 20:56:23.889"></status>
+</kw>
+<status status="PASS" starttime="20200413 20:56:20.707" endtime="20200413 20:56:23.889"></status>
+</kw>
+<kw name="Enter &quot;Second Product Name&quot;" library="HomePage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_text_variable}</arg>
+<arg>${second_product_name}</arg>
+</arguments>
+<msg timestamp="20200413 20:56:23.890" level="INFO">Typing text 'Asus N551JK-XO076H Laptop' into text field 'id=small-searchterms'.</msg>
+<status status="PASS" starttime="20200413 20:56:23.890" endtime="20200413 20:56:24.147"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200413 20:56:26.155" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200413 20:56:24.147" endtime="20200413 20:56:26.155"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${search_button_variable}</arg>
+</arguments>
+<msg timestamp="20200413 20:56:26.155" level="INFO">Clicking button 'xpath=//input[@value="Search"]'.</msg>
+<status status="PASS" starttime="20200413 20:56:26.155" endtime="20200413 20:56:27.051"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200413 20:56:29.052" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200413 20:56:27.052" endtime="20200413 20:56:29.052"></status>
+</kw>
+<status status="PASS" starttime="20200413 20:56:23.889" endtime="20200413 20:56:29.052"></status>
+</kw>
+<kw name="Add Compare Second product" library="CompareProductPO">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Click Button</arg>
+<arg>${add_compare_firstProduct}</arg>
+</arguments>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${add_compare_firstProduct}</arg>
+</arguments>
+<msg timestamp="20200413 20:56:29.052" level="INFO">Clicking button 'xpath=//input[@class="button-2 add-to-compare-list-button"]'.</msg>
+<status status="PASS" starttime="20200413 20:56:29.052" endtime="20200413 20:56:29.176"></status>
+</kw>
+<status status="PASS" starttime="20200413 20:56:29.052" endtime="20200413 20:56:29.176"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200413 20:56:32.190" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200413 20:56:29.176" endtime="20200413 20:56:32.190"></status>
+</kw>
+<status status="PASS" starttime="20200413 20:56:29.052" endtime="20200413 20:56:32.190"></status>
+</kw>
+<kw name="Navigate To Compare Page" library="CompareProductPO">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Click Link</arg>
+<arg>${product_comparison}</arg>
+</arguments>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${product_comparison}</arg>
+</arguments>
+<msg timestamp="20200413 20:56:32.190" level="INFO">Clicking link 'xpath=//a[contains(text(),"product comparison")]'.</msg>
+<status status="PASS" starttime="20200413 20:56:32.190" endtime="20200413 20:56:32.970"></status>
+</kw>
+<status status="PASS" starttime="20200413 20:56:32.190" endtime="20200413 20:56:32.970"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200413 20:56:35.977" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200413 20:56:32.970" endtime="20200413 20:56:35.977"></status>
+</kw>
+<status status="PASS" starttime="20200413 20:56:32.190" endtime="20200413 20:56:35.977"></status>
+</kw>
+<status status="PASS" starttime="20200413 20:56:10.678" endtime="20200413 20:56:35.977"></status>
+</kw>
+<kw name="Verify Two Product Existing" library="ecommerceApp">
+<kw name="Verify Compare Two Product" library="CompareProductPO">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${Name_product_row}</arg>
+</arguments>
+<msg timestamp="20200413 20:56:35.977" level="INFO">Simulating Mouse Over on element 'xpath=//table[@class="compare-products-table"]//tr[6]'.</msg>
+<status status="PASS" starttime="20200413 20:56:35.977" endtime="20200413 20:56:36.296"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${first_product_name}</arg>
+</arguments>
+<status status="PASS" starttime="20200413 20:56:36.296" endtime="20200413 20:56:36.319"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200413 20:56:38.325" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200413 20:56:36.320" endtime="20200413 20:56:38.325"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${second_product_name}</arg>
+</arguments>
+<status status="PASS" starttime="20200413 20:56:38.325" endtime="20200413 20:56:38.341"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200413 20:56:40.357" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200413 20:56:38.341" endtime="20200413 20:56:40.357"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${CPU_Type_row}</arg>
+</arguments>
+<msg timestamp="20200413 20:56:40.357" level="INFO">Simulating Mouse Over on element 'xpath=//table[@class="compare-products-table"]//tr[6]'.</msg>
+<status status="PASS" starttime="20200413 20:56:40.357" endtime="20200413 20:56:40.629"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<doc>Verifies table cell contains text ``expected``.</doc>
+<arguments>
+<arg>${CompareProduct_Table}</arg>
+<arg>6</arg>
+<arg>2</arg>
+<arg>Intel Core i7</arg>
+</arguments>
+<msg timestamp="20200413 20:56:40.754" level="INFO">Table cell contains 'Intel Core i7'.</msg>
+<status status="PASS" starttime="20200413 20:56:40.629" endtime="20200413 20:56:40.754"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200413 20:56:42.770" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200413 20:56:40.754" endtime="20200413 20:56:42.770"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<doc>Verifies table cell contains text ``expected``.</doc>
+<arguments>
+<arg>${CompareProduct_Table}</arg>
+<arg>6</arg>
+<arg>3</arg>
+<arg>Intel Core i5</arg>
+</arguments>
+<msg timestamp="20200413 20:56:42.863" level="INFO">Table cell contains 'Intel Core i5'.</msg>
+<status status="PASS" starttime="20200413 20:56:42.770" endtime="20200413 20:56:42.863"></status>
+</kw>
+<status status="PASS" starttime="20200413 20:56:35.977" endtime="20200413 20:56:42.863"></status>
+</kw>
+<status status="PASS" starttime="20200413 20:56:35.977" endtime="20200413 20:56:42.863"></status>
+</kw>
+<kw name="Delete Compare Product" library="ecommerceApp">
+<kw name="Clear Compare Two Product" library="CompareProductPO">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${Clear_List}</arg>
+</arguments>
+<msg timestamp="20200413 20:56:42.863" level="INFO">Clicking link 'xpath=//a[contains(.,"Clear")]'.</msg>
+<status status="PASS" starttime="20200413 20:56:42.863" endtime="20200413 20:56:44.003"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200413 20:56:46.014" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200413 20:56:44.003" endtime="20200413 20:56:46.014"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[@class="no-data"]</arg>
+</arguments>
+<msg timestamp="20200413 20:56:46.014" level="INFO">Simulating Mouse Over on element 'xpath=//div[@class="no-data"]'.</msg>
+<status status="PASS" starttime="20200413 20:56:46.014" endtime="20200413 20:56:46.327"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>You have no items to compare.</arg>
+<arg>loglevel=TRACE</arg>
+</arguments>
+<msg timestamp="20200413 20:56:46.374" level="INFO">Current page contains text 'You have no items to compare.'.</msg>
+<status status="PASS" starttime="20200413 20:56:46.327" endtime="20200413 20:56:46.374"></status>
+</kw>
+<status status="PASS" starttime="20200413 20:56:42.863" endtime="20200413 20:56:46.374"></status>
+</kw>
+<status status="PASS" starttime="20200413 20:56:42.863" endtime="20200413 20:56:46.374"></status>
+</kw>
+<kw name="End Web Test" library="Common" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200413 20:56:46.374" endtime="20200413 20:56:48.936"></status>
+</kw>
+<status status="PASS" starttime="20200413 20:56:46.374" endtime="20200413 20:56:48.936"></status>
+</kw>
+<tags>
+<tag>Compare Products</tag>
+</tags>
+<status status="PASS" starttime="20200413 20:56:06.473" endtime="20200413 20:56:48.936" critical="yes"></status>
+</test>
+<doc>User Can Compare Products</doc>
+<status status="PASS" starttime="20200413 20:56:06.114" endtime="20200413 20:56:48.936"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Compare Products</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="CompareProducts">CompareProducts</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
